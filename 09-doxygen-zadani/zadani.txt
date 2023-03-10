@@ -1,0 +1,135 @@
+Full name
+email@address 
+
+Deadline: 18.12.2022letc
+
+
+This assignment has two alternatives: documenting
+  (1) either some part of your own non-trivial program (term project ("zapoctak"), module of some open source project, etc),
+  (2) or the supplied program according to specific tasks provided below.
+You should pick just one alternative based on your preferences.
+
+Useful links and help:
+  http://www.doxygen.nl/
+
+
+====================
+   ALTERNATIVE 1
+====================
+
+-------
+Doxygen
+-------
+
+1. Create the configuration file for Doxygen (see task 2 in the second alternative below). 
+
+2. Write documentation for some part of your program. Use more-or-less the same set of Doxygen features as is required for the second alternative.
+
+3. Submit the following: a part of the source code of your program (a diff would be sufficient) that contains all the documentation annotations created for this homework and the configuration file of Doxygen.
+
+
+====================
+   ALTERNATIVE 2
+==================== 
+
+-------
+Doxygen
+-------
+
+0. The "rpg" directory contains some parts of a C++/Java tool. Many parts were removed, so that is
+   why it does not compile (building is not needed for the assignment).
+   Before you change anything, it is recommended to copy the original directory (for later diffs).
+   For example by "cp -a rpg rpg.orig" (or use, e.g., Git).
+
+1. Create new subdirectory "doc" under the "rpg" directory.
+   
+2. Create the configuration file for Doxygen in the "doc" subdirectory. Use the command that creates
+   a default configuration.
+   Include here the command and output.
+
+   You should configure the following:
+    - Fill in the tags for project name, project version (pick some number), and brief project description.
+    - Make sure that (empty) documentation is created for all source code entities, including those not yet
+	  explicitly documented, and also for the private and static members.
+    - Set the input directory to "src" with recursive scanning. There is no need to override the default file patterns.
+    - Disable the Latex output.
+    - Enable the treeview generation for HTML output.
+    - Enable automatic brief comments (or use appropriate commands when documenting).
+
+   Paste all changes to the configuration file here.
+
+3. Generate the HTML documentation.
+   Include here the command and output.
+
+4. Write documentation for the file src/general/convert.h, using any preferred comment style.
+   Try to guess what the file and functions do, or make the description up.
+   Document the file itself with a brief and full description (short).
+   Document the methods, including both brief and full descriptions.
+    - include documentation tags for parameters and returns values, indicating input and output
+      parameters appropriately, and also C++ template parameters.
+   Test all the changes.
+
+5. Write documentation for the file common/java/rpgj/Rand.java (using the javadoc-style).
+    - document the file, package, class and at least two fields and two methods.
+
+6. Write documentation of the "error_prefix" variable in the file src/common/error.cpp, based on the existing comment.
+   Make sure the reference to the "set_err_prefix" function, mentioned already in the description, becomes a functional link
+   in the generated HTML.
+   
+   Then, document the "set_err_prefix" function declaration in the file include/common.h (see the implementation in the
+   file src/common/error.cpp).
+   In the function's description, create the "see also" link from the function to the "error_prefix" variable (using the
+   proper command).
+   Test the changes and verify that the links work.
+
+7. Document the "rpg" namespace in a block placed in the file include/main.h (this means using a command to create
+   the documentation at another place tham where the entity is defined).
+   Test the change.
+
+8. Populate the main page of the documentation with the content of the README file, using a documentation block (with
+   the appropriate command) placed in the file include/main.h.
+   Convert the simple ASCII formatting of the README file appropriately (use sections, subsections, bullets, and numbered
+   or alphabetized lists).
+   Make sure that the "moduleBase" link (mentioned in the text) works properly.
+   Test all the changes.
+
+9. Enable generating of the inheritance diagrams and call graphs (modify the configuration as needed).
+M
+10. Include here a diff of the sources against the original (diff -ru rpg.orig/src rpg/src) containing your changes.
+    Paste it here or attach as a separate .diff file.
+
+11. Send the protocol including all requested information (commands, output, diffs). 
+
+====================
+ 
+-------
+Survey:
+-------
+
+We use the survey to evaluate the labs (tasks) and homework assignments.
+It is completely voluntary, but useful for future tuning of the content and level of complexity of the labs.
+Most questions can be answered using the scale from 1 to 10.
+Write your answer under the corresponding question.
+
+(1) How new was the topic and content of the lab for you?
+     (1 - brand new, 10 - I already knew everything)
+
+
+(2) Do you think that the content of this lab was useful?
+     (1 - useless or too trivial, 10 - very useful)
+
+
+(3) How do you evaluate the level of complexity of the homework assignment?
+     (1 - too trivial, 5-6 - just about right, 10 - too demanding or complex)
+
+
+(4) How do you evaluate your prior experience with the tool in the context of the homework assignment?
+     (1 - I already know and can use everything, 10 - I tried everything practically for the first time)
+
+
+(5) How much time (in minutes) did you spend working on the homework assignment?
+
+
+(6) Additional space for your own comments on the lab and homework assignment:
+
+
