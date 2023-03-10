@@ -1,0 +1,19 @@
+02-git HW
+https://github.com/KlosStepan/NSWI154
+1. I already have and identity at $HOME/.gitconfig
+2. In the folder /Users/stepo/Documents/Nastroje write mkdir 02-git, cd 02-git,  Initialize empty Git repo -> git init
+3. touch main.cpp, edit main.cpp w/ vim to calculate factorial, -> git add main.cpp, -> git commit -m “First commit“ (I HAD TO GENERATE SSH KEY AND AUTHORIZE MY NEW LAPTOP FOR THE GITHUB ACCOUNT),(NOW I HAD TO CREATE EMPTY REPO AND PUSH EXISTING FROM MY COMPUTER) -> git remote add origin https://github.com/KlosStepan/NSWI154.git -> git push -u origin master
+4. MOVE THE FIBONACCI FUNCTIONALITY INTO fi_lib.h FILE IN A ’C++ PROPER WAY’, MODIFY main.cpp AND RECOMPILE
+5. ADD FILES -> git commit -m “Adding lib“ -> git push -u origin master
+6. FUCK…I DID NOT CREATE 2 FILES, I JUST EDITED main.cpp ADDED LIB FILE…SO TO DEMONSTRATE THIS POINT I  JUST CREATE aux.cpp, -> git add . ->git commit -m “Committing all w/ aux.cpp“ AND I DELETE NOW aux.cpp THEN COMMIT THE DELETE -> git add . -> git commit -m “Commit w/o aux.cpp“ SO aux.cpp GETS DELETED FROM ON-LINE REPO
+7. -> git checkout -b “oneline“ CREATED NEW BRANCH AND SWITCHED TO IT (=ABBREVATION of -> git branch oneline -> git checkout oneline)
+8. NOW  EDIT main.cpp DELETE NEW LINE  PRINTING AND -> git add README.md fi_lib.h main.cpp -> git commit -m “test commit new branch“ -> git checkout oneline ->git push origin oneline DONE
+9. ->git checkout master
+10. MODIFY (i) AND (ii) -> git add fi_lib.h -> git commit -m “committing 10. (ii)“ -> git push
+11. -> git diff NEBO -> git status
+12. -> git reset  - -hard //JAK JSTE TO MYSLEL?
+13. -> git checkout master -> git merge oneline COMMENT AND wq+ENTER-> git merge AND -> git add . ->git commit -m “committing merged online into master“ -> git push
+14. -> git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset" --graph --all
+15. Go folder up and create new folder by typing in 02-git-cviceni2019 an inside git clone https://gitlab.mff.cuni.cz/teaching/nswi154/cviceni2019.git
+16. vim main.c NAME ADDED
+17. git diff
