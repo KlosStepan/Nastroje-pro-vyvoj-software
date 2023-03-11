@@ -1,12 +1,15 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(mydb)
 
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED True)
 
-# Add sources
-set(SOURCES
+# Compile flags
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -pedantic")
+
+# Source files
+set(SRC
     btree_int.c
     client_comm.c
     conds.c
@@ -29,30 +32,27 @@ set(SOURCES
     textfileio.c
 )
 
-# Add headers
-set(HEADERS
-    data.h
-    linklist.h
-    textfileio.h
-)
+# Library
+add_library(mydb STATIC ${SRC})
 
-# Add executables
-add_executable(testclient testclient.c)
-add_executable(testserver testserver.c)
-add_executable(testadmin testadmin.c)
-
-# Add libraries
-add_library(mydb STATIC ${SOURCES} ${HEADERS})
-
-# Link readline and history libraries
-find_library(READLINE_LIBRARY readline)
-find_library(HISTORY_LIBRARY history)
-target_link_libraries(testclient mydb ${READLINE_LIBRARY} ${HISTORY_LIBRARY})
-target_link_libraries(testserver mydb ${READLINE_LIBRARY} ${HISTORY_LIBRARY})
-target_link_libraries(testadmin mydb ${READLINE_LIBRARY} ${HISTORY_LIBRARY})
-
-# Add include directories
+# Headers
 target_include_directories(mydb PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-# Add compilation flags
-target_compile_options(mydb PRIVATE ${CMAKE_C_FLAGS})
+# Test clients
+add_executable(testclient testclient.c)
+target_link_libraries(testclient mydb readline)
+
+add_executable(testserver testserver.c)
+target_link_libraries(testserver mydb readline)
+
+add_executable(testadmin testadmin.c)
+target_link_libraries(testadmin mydb readline)
+
+# Clean
+add_custom_target(clean-all
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_BINARY_DIR}/libmydb.a
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_BINARY_DIR}/testclient
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_BINARY_DIR}/testserver
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_BINARY_DIR}/testadmin
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_BINARY_DIR}/*.o
+)
