@@ -63,13 +63,13 @@ I chose assignment for automatic generation of documentation. It's for my custom
 ## ~~10-perf S4 Performance analysis (GProf, JVisualVM)~~
 XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK). 
 
-I did some simple monitoring and benchmarking in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison. These tasks took approx. ~8s in DOKS-Kubernetes cluster and approx ~10s on my computer.     
+I did some simple monitoring and performance testing in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison. These tasks took approx. ~8s in DOKS-Kubernetes cluster and approx ~10s on my computer.     
 
-I will, however, use Prometheus soon for cluster monitoring in my Kubernetes cluster. I partially set it (next chapter). 
+I am currently preparing the use Prometheus for monitoring in my Kubernetes cluster. I partially did setup of the cluster (in next chapter). Currently exploring the logging&evaluation approaches to monitor my (and in future my company) clusters. 
 ## 100-Kubernetes/Docker
 I set up my own DOKS Kubernetes at [digitalocean.com](https://www.digitalocean.com) and migrated several LAMP applications over there. I work with multiple Node setup, chose appropriate images for different application situations and set up my own database with persistent volume.  
 
-I have repository about it, but I don't feel confident opening it for the public yet. I will just copy-paste it to folder of this repository w/o some "confidential stuff", which might reveal structure or ports in my cluster.
+I have repository about it, but I don't feel confident opening it for the public yet. I will just copy-paste it to folder **100-DOKS-Kubernetes** of this repository w/o some "confidential stuff", which might reveal structure or ports in my cluster.
 
 # Tasks feedbacks
 ## 02-Git hw_score: 5/10
