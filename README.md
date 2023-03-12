@@ -65,7 +65,7 @@ XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` 
 
 I did some simple monitoring and performance testing in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison. These tasks took approx. ~8s in DOKS-Kubernetes cluster and approx ~10s on my computer.     
 
-I am currently preparing the use Prometheus for monitoring in my Kubernetes cluster. I partially did setup of the cluster (in next chapter). Currently exploring the logging&evaluation approaches to monitor my (and in future my company) clusters. 
+I am currently preparing the use Prometheus for monitoring in my Kubernetes cluster. I so far used CLI `kubectl` and Lens/Kubernetes Dashboard. I did setup of the cluster (in next chapter) w/o these monitoring tools. Currently exploring the logging&evaluation approaches to monitor my (and in future my company) clusters. 
 ## 100-Kubernetes/Docker
 I set up my own DOKS Kubernetes at [digitalocean.com](https://www.digitalocean.com) and migrated several LAMP applications over there. I work with multiple Node setup, chose appropriate images for different application situations and set up my own database with persistent volume.  
 
