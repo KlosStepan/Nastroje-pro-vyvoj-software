@@ -1,0 +1,139 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-kubernetes-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: "adminer.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: adminer-service
+            port:
+              number: 80
+  - host: "zamery.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: zamery
+            port:
+              number: 80            
+  - host: "cors-proxy.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: cors-proxy
+            port:
+              number: 3000
+  - host: "momence.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: momence
+            port:
+              number: 80
+  - host: "hw1.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: hello-kubernetes-first
+            port:
+              number: 80
+  - host: "hw2.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: hello-kubernetes-second
+            port:
+              number: 80
+  - host: "lnmap.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: lnmap
+            port:
+              number: 80
+  - host: "swimmpair090.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: swimmpair-service-old
+            port:
+              number: 80
+  - host: "swimmpair.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: swimmpair-service-prod
+            port:
+              number: 80 
+  - host: "docu.swimmpair.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: docu-swimmpair-service
+            #name: hello-kubernetes-first 
+            port:
+              number: 80                      
+  - host: "swimmpair.stkl.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: swimmpair-service
+            port:
+              number: 80
+  - host: "ubyvapuda.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: ubyvapuda-cz
+            port:
+              number: 80
+  - host: "vipsidla.cz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: vipsidla-cz
+            port:
+              number: 80

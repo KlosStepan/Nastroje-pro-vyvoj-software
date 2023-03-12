@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: swimmpair-service-prod
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: swimmpair-prod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swimmpair-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swimmpair-prod
+  template:
+    metadata:
+      labels:
+        app: swimmpair-prod
+    spec:
+      containers:
+      - name: swimmpair-prod
+        image: stepanklos/swimmpair:1.00
+        securityContext:
+          allowPrivilegeEscalation: true
+        ports:
+        - containerPort: 80
+        env:
+        - name: MESSAGE
+          value: Hello from swimmpair0.90 Deployment!
+        - name: DATABASE_HOST
+          value: 'mysql-service'
+        - name: DATABASE_USER
+          value: 'USERXXXXXXXXXXXXXX'
+        - name: DATABASE_PASS
+          value: 'PASSWDXXXXXXXXXXXX'
+        - name: DATABASE_NAME
+          value: 'plavani-prod'    
