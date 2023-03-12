@@ -12,7 +12,7 @@ We use [**Kubernetes Dashboard**](https://github.com/kubernetes/dashboard), [**L
 1. Cluster Visualization - blue components are either external (DNS Services, Load Balancer / DBs or Image Registry) or added to the cloud later (Ingress). It shows architecture of MySQL DBs in cluster and one PHP app utilizing it. Orange color is used for external communication/traffic.
 2. Cluster Running architecture - 1 DOKS (Master) & 2 Nodes (2nd+ nodes are optional - therefore blue).
 3. YAML config files example mockup.
-![DOKS Cluster design](/misc/kubernetes-design.jpg "doks-cluster-design")
+![DOKS Cluster design](misc/kubernetes-design.jpg "doks-cluster-design")
 ## Tools running in Kubernetes Cluster
 - **kubernetes-ingress-config.yaml** - Ingress routes config.
 - **mysql-deployment/** - MySQL Database in Kubernetes Cluster.
