@@ -61,7 +61,11 @@ Testing was tried on Java/JUnit and result are in separate public repo along w/ 
 ## 09-Doxygen
 I chose assignment for automatic generation of documentation. It's for my custom project [KlosStepan/SwimmPair-Www](https://github.com/KlosStepan/SwimmPair-Www) in PHP, so it's a bit different from what we've talked about on the lesson, however, all requirements from the list were met. The HTML output documentation is running in my K8s Cluster on address [docu.swimmpair.cz](http://docu.swimmpair.cz). There is nothing to say except just changing flags and preparing tens-hundreds of annotations and thinking about captions hmpf. But the result was definitely worth it. 
 ## ~~10-perf S4 Performance analysis (GProf, JVisualVM)~~
-XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK). I will, however, use Prometheus soon for cluster monitoring in my Kubernetes cluster. I partially set it (next chapter). 
+XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK). 
+
+I did some simple monitoring and benchmarking in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison.   
+
+I will, however, use Prometheus soon for cluster monitoring in my Kubernetes cluster. I partially set it (next chapter). 
 ## 100-Kubernetes/Docker
 I set up my own DOKS Kubernetes at [digitalocean.com](https://www.digitalocean.com) and migrated several LAMP applications over there. I work with multiple Node setup, chose appropriate images for different application situations and set up my own database with persistent volume.  
 
