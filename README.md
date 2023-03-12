@@ -59,7 +59,7 @@ Built target clean-all
 ## 08-Testing/JUnit, S3 Functional testing(JUnit, NUnit)
 Testing was tried on Java/JUnit and result are in separate public repo along w/ code and additional information: [KlosStepan/UnitTesting-JUnit](https://github.com/KlosStepan/UnitTesting-JUnit).
 ## 09-Doxygen
-I chose assignment for automatic generation of documentation. It's for my custom project [KlosStepan/SwimmPair-Www](https://github.com/KlosStepan/SwimmPair-Www) in PHP, so it's a bit different from what we've talked about on the lesson, however, all requirements from the list were met. The HTML output documentation is running in my K8s Cluster on address [docu.swimmpair.cz](http://docu.swimmpair.cz). There is nothing to say except just changing flags and preparing tens-hundreds of annotations and thinking about captions hmpf. But the result was definitely worth it. 
+I chose assignment for automatic generation of documentation. It's for my custom project [KlosStepan/SwimmPair-Www](https://github.com/KlosStepan/SwimmPair-Www) in PHP, so it's a bit different from what we've talked about on the lesson, however, all requirements from the list were met. The HTML output documentation is running in my K8s Cluster on address [docu.swimmpair.cz](http://docu.swimmpair.cz). There is nothing to say except just changing flags and preparing tens-hundreds of annotations and thinking about captions hmpf. But the result was definitely worth it. I am also planning on exporting the PDF option.
 ## ~~10-perf S4 Performance analysis (GProf, JVisualVM)~~
 XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK). 
 
