@@ -17,3 +17,5 @@ https://github.com/KlosStepan/NSWI154
 15. Go folder up and create new folder by typing in 02-git-cviceni2019 an inside git clone https://gitlab.mff.cuni.cz/teaching/nswi154/cviceni2019.git
 16. vim main.c NAME ADDED
 17. git diff
+__
+18.. meh lost, gitlab vs github merging
