@@ -63,7 +63,7 @@ I chose assignment for automatic generation of documentation. It's for my custom
 ## ~~10-perf S4 Performance analysis (GProf, JVisualVM)~~
 XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK). 
 
-I did some simple monitoring and benchmarking in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison.   
+I did some simple monitoring and benchmarking in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison. These tasks took approx. ~8s in DOKS-Kubernetes cluster and approx ~10s on my computer.     
 
 I will, however, use Prometheus soon for cluster monitoring in my Kubernetes cluster. I partially set it (next chapter). 
 ## 100-Kubernetes/Docker
