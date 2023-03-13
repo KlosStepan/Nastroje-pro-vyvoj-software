@@ -8,9 +8,12 @@ I spent decent half of year exploring several Kubernetes production options (Ama
 # Tasks overview
 
 ## 02-Git, S1 Version control systems(Git, SVN, Hg)
-This assignment is completed from previous year so it's just copy-pasted from back then. Solution is called **reseni.txt**. 
+This assignment is completed from previous year so it's just copy-pasted from back then. Solution is called **reseni.txt**.   
+<ins>Produced: /02-git/reseni.txt</ins>
+
 ## 03-Make, S2 (Make, Ant, MS Build)
-Solved this year, there are 2 Makefiles (one **root folder**, second **mydb/src**) that are working together with all requirements met. Nested targets are called via main one.    
+Solved this year, there are 2 Makefiles (one **root folder**, second **mydb/src**) that are working together with all requirements met. Nested targets are called via main one.  
+<ins>Produced: /03-make/Makefile & /03-make/mydb/src/Makefile</ins>
 
 Calling `make` or w/ targets in folder **zadani** works. 
 
@@ -26,7 +29,8 @@ data.o: data.c data.h textfileio.h linklist.h
 	$(CC) -c $(CFLAGS) data.c
 ```  
 ## 05-Build/CMake
-Same structure, but filed called CMakeLists.txt. CMakeLists.txt in **05-build**, CMakeLists.txt in **05-build/mydb/src**. The upper CMakeLists.txt in `zadani` is much simpler than his predecesor's (Makefile) equivalent.
+Same structure, but filed called CMakeLists.txt. CMakeLists.txt in **05-build**, CMakeLists.txt in **05-build/mydb/src**. The upper CMakeLists.txt in `zadani` is much simpler than his predecesor's (Makefile) equivalent.  
+<ins>Produced: /05-build/CMakeLists.txt & /05-build/mydb/src/CMakeLists.txt</ins>
 ```CMake
 cmake_minimum_required(VERSION 3.0)
 project(mydb)
@@ -57,25 +61,36 @@ Built target clean-all
 ```
 
 ## 08-Testing/JUnit, S3 Functional testing(JUnit, NUnit)
-Testing was tried on Java/JUnit and result are in separate public repo along w/ code and additional information: [KlosStepan/UnitTesting-JUnit](https://github.com/KlosStepan/UnitTesting-JUnit).
+Testing was tried on Java/JUnit and result are in separate public repo along w/ code and additional information: [KlosStepan/UnitTesting-JUnit](https://github.com/KlosStepan/UnitTesting-JUnit).  
+<ins>Produced: 3 ClassTests.java classes - more in repo w/ info.</ins>
+
 ## 09-Doxygen
-I chose assignment for automatic generation of documentation. It's for my custom project [KlosStepan/SwimmPair-Www](https://github.com/KlosStepan/SwimmPair-Www) in PHP, so it's a bit different from what we've talked about on the lesson, however, all requirements from the list were met. The HTML output documentation is running in my K8s Cluster on address [docu.swimmpair.cz](http://docu.swimmpair.cz). There is nothing to say except just changing flags and preparing tens-hundreds of annotations and thinking about captions hmpf. But the result was definitely worth it. I am also planning on exporting the PDF option.
+I chose assignment for automatic generation of documentation. It's for my custom project [KlosStepan/SwimmPair-Www](https://github.com/KlosStepan/SwimmPair-Www) in PHP, so it's a bit different from what we've talked about on the lesson, however, all requirements from the list were met. The HTML output documentation is running in my K8s Cluster on address [docu.swimmpair.cz](http://docu.swimmpair.cz). There is nothing to say except just changing flags and preparing tens-hundreds of annotations and thinking about captions hmpf. But the result was definitely worth it. I am also planning on exporting the PDF option.  
+
+<ins>Produced: Doxyfile in KlosStepan/SwimmPair-www</ins>
+``www/>Doxygen doxyfile``  produces docu output w/ clonned repo into www/_doc.
+
 ## ~~10-perf S4 Performance analysis (GProf, JVisualVM)~~
-XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK). 
+XX gprof not working on Mac. I wanted to do profiling and analysis, but `gprof` is for Mac (AFAIK).  
+
 
 I did some simple monitoring and performance testing in PHP [SwimmPair-Www/dummy_data_benchmark](https://github.com/KlosStepan/SwimmPair-Www/blob/master/dummy_data_benchmark.php) which I recorded for testing purposes in Cluster [benchmarks/doks-ams3/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/doks-ams3) and on my computer [benchmarks/mbp2018-i5-8259U-16-512/outputs](https://github.com/KlosStepan/SwimmPair-Www/tree/master/_misc/mbp2018-i5-8259U-16-512) for comparison. These tasks took approx. ~8s in DOKS-Kubernetes cluster and approx ~10s on my computer.     
 
 I am currently preparing the use Prometheus for monitoring in my Kubernetes cluster. I so far used CLI `kubectl` and Lens/Kubernetes Dashboard. I did setup of the cluster (in next chapter) w/o these monitoring tools. Currently exploring the logging&evaluation approaches to monitor my (and in future my company) clusters. 
+
+<ins>Produced: nothing here</ins>
 ## 100-Kubernetes/Docker
 I set up my own DOKS Kubernetes at [digitalocean.com](https://www.digitalocean.com) and migrated several LAMP applications over there. I work with multiple Node setup, chose appropriate images for different application situations and set up my own database with persistent volume.  
 
 I have repository about it, but I don't feel confident opening it for the public yet. I will just copy-paste it to folder **100-DOKS-Kubernetes** of this repository w/o some "confidential stuff", which might reveal structure or ports in my cluster.
 
+<ins>Produced: Folder 100-DOKS-Kubernetes/README.md, also README.d in mysql folder about installation + yaml config files and Ingress config</ins>
+
 # Tasks feedbacks
 ## 02-Git hw_score: 5/10
-Good tool, but I was confused by the lecture and tasks in the second half of assignment. I use Git on regular basis but with different set of tasks at job/for my stuff.  
+Good tool, but I was confused by the lecture and tasks in the second half of assignment. I use Git on regular basis but with different set of tasks at job/for my stuff.
 ## 03-Make hw_score: 6.5/10
-Very good task, but bit overwhelming assignment in regards to description and number of files (and linking agains libraries). Otherwise I would give 8/10. I wasn't sure whether I should wildcards the .h/.c couples so I just wrote them straight away. It took me longer to orient myself in the structure of project. I also had problem with linking of `-lhistory` on Mac.
+Very good task, but bit overwhelming assignment in regards to description and number of files (and linking agains libraries). Otherwise I would give 8/10. I wasn't sure whether I should wildcards the .h/.c couples so I just wrote them straight away. It took me longer to orient myself in the structure of project. I also had problem with linking of `-lhistory` on Mac.  
 ## 05-Build/CMake hw_score: 7/10
 Almost logically copypasted prev. task, but CMake is more useful than Make from my point of view.  
 **CMake** is a wonderful tool which serves as an API language for either Makefile, MSBuild etc. It reminds me of advent of jQuery which unified DOM operations across different browsers.  
